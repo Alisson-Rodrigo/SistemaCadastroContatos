@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SistemaDeCadastro"
+    "\\SistemaDeCadastro",
+    "\\SistemaDeCadastro\\Controllers"
   ],
-  "SelectedNode": "\\SistemaDeCadastro\\SistemaDeCadastro.sln",
+  "SelectedNode": "\\SistemaDeCadastro\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }
