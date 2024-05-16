@@ -21,9 +21,11 @@ namespace SistemaDeCadastro.Repositorio
 
         public UserModel BuscarPorLogin(string login)
         {
-            return _bancoContext.Usuarios.FirstOrDefault(c => c.Login.ToUpper() == login.ToUpper());
-        }
+            Console.WriteLine(login);
+            UserModel usuario = _bancoContext.Usuarios.FirstOrDefault(c => c.Login.ToUpper() == login.ToUpper());
+            return usuario;
 
+        }
 
         public List<UserModel> GetUserList()
         {
@@ -32,7 +34,8 @@ namespace SistemaDeCadastro.Repositorio
 
         public UserModel InfoUsuario(int id)
         {
-            return _bancoContext.Usuarios.FirstOrDefault(c => c.id == id);
+            var usuario = _bancoContext.Usuarios.FirstOrDefault(c => c.id == id);
+            return usuario;
         }
         public UserModel EditarUsuario(UserModel NovoUsuario, int id)
         {
