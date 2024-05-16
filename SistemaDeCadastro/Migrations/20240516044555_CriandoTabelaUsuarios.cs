@@ -23,7 +23,7 @@ namespace SistemaDeCadastro.Migrations
                     Perfil = table.Column<int>(type: "int", nullable: false),
                     Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataAtualizacao = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DataAtualizacao = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
