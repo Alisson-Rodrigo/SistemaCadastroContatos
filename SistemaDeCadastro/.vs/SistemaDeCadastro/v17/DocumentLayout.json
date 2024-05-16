@@ -1,0 +1,317 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\repositorio\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:repositorio\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\repositorio\\iusuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:repositorio\\iusuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\repositorio\\contatorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:repositorio\\contatorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\views\\contatos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:views\\contatos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\controllers\\contatoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:controllers\\contatoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\views\\contatos\\criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:views\\contatos\\criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\views\\shared\\_layout_deslogada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:views\\shared\\_layout_deslogada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|c:\\users\\puroolight\\source\\repos\\alisson-rodrigo\\sistemacadastrocontatos\\sistemadecadastro\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD218DF-3AFC-4A9A-A0C3-3917339590BD}|SistemaDeCadastro.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Models\\UserModel.cs",
+              "RelativeToolTip": "Models\\UserModel.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAiwBgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:53:38.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Repositorio\\UsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\UsuarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Repositorio\\UsuarioRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\UsuarioRepositorio.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAIwBUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:45:28.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsuarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Repositorio\\IUsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\IUsuarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Repositorio\\IUsuarioRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\IUsuarioRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:44:30.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAASwBYAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:59:09.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:02:57.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ContatoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Repositorio\\ContatoRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\ContatoRepositorio.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Repositorio\\ContatoRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\ContatoRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:45:26.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Controllers\\UsuariosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:10:15.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T19:40:23.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Contatos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contatos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Contatos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Contatos\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T19:30:05.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Login\\index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Login\\index.cshtml",
+              "ToolTip": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Login\\index.cshtml",
+              "RelativeToolTip": "Views\\Login\\index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T17:59:44.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ContatosController.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Controllers\\ContatosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContatosController.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Controllers\\ContatosController.cs",
+              "RelativeToolTip": "Controllers\\ContatosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:59:04.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Criar.cshtml",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Contatos\\Criar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contatos\\Criar.cshtml",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Contatos\\Criar.cshtml",
+              "RelativeToolTip": "Views\\Contatos\\Criar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T19:29:49.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAkwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-16T18:13:41.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_Layout_deslogada.cshtml",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Shared\\_Layout_deslogada.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout_deslogada.cshtml",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Shared\\_Layout_deslogada.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout_deslogada.cshtml",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAACEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T18:01:34.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T18:19:29.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T18:09:18.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\PurooLight\\source\\repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T18:09:15.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

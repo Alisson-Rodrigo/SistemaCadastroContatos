@@ -19,6 +19,12 @@ namespace SistemaDeCadastro.Repositorio
             return usuario;
         }
 
+        public UserModel BuscarPorLogin(string login)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(c => c.Login.ToUpper() == login.ToUpper());
+        }
+
+
         public List<UserModel> GetUserList()
         {
             return _bancoContext.Usuarios.ToList();

@@ -21,6 +21,10 @@ namespace SistemaDeCadastro.Models
         public DateTime DataCriacao { get; set; }
         public DateTime? DataAtualizacao { get; set; }
 
+        public bool VerificarSenha (string senha) {
+            return Senha == senha;
+        }
+
         
     }
 }
