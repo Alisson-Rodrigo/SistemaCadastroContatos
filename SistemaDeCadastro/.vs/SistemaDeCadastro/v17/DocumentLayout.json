@@ -82,43 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
@@ -143,8 +111,7 @@
               "RelativeToolTip": "Controllers\\LoginController.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAIwBMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T17:59:09.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T17:59:09.957Z"
             },
             {
               "$type": "Document",
@@ -156,8 +123,7 @@
               "RelativeToolTip": "Repositorio\\UsuarioRepositorio.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAmwB0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:45:28.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T19:45:28.931Z"
             },
             {
               "$type": "Document",
@@ -169,8 +135,7 @@
               "RelativeToolTip": "Repositorio\\IUsuarioRepositorio.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAawAQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:44:30.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T19:44:30.291Z"
             },
             {
               "$type": "Document",
@@ -182,8 +147,7 @@
               "RelativeToolTip": "Models\\LoginModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:02:57.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T19:02:57.054Z"
             },
             {
               "$type": "Document",
@@ -195,8 +159,7 @@
               "RelativeToolTip": "Repositorio\\ContatoRepositorio.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAIwBkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:45:26.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T19:45:26.786Z"
             },
             {
               "$type": "Document",
@@ -208,8 +171,7 @@
               "RelativeToolTip": "Controllers\\UsuariosController.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAuwCEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:10:15.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T19:10:15.039Z"
             },
             {
               "$type": "Document",
@@ -221,8 +183,7 @@
               "RelativeToolTip": "Models\\UserModel.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAiwAYAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:53:38.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T19:53:38.433Z"
             },
             {
               "$type": "Document",
@@ -234,8 +195,7 @@
               "RelativeToolTip": "Views\\Login\\index.cshtml",
               "ViewState": "AQIAADcAAAAAAAAAAAAiwEYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-16T17:59:44.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T17:59:44.528Z"
             },
             {
               "$type": "Document",

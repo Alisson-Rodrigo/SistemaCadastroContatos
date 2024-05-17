@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\SistemaDeCadastro",
-    "\\SistemaDeCadastro\\Controllers"
+    "\\SistemaDeCadastro\\Controllers",
+    "\\SistemaDeCadastro\\Enums"
   ],
-  "SelectedNode": "\\SistemaDeCadastro\\Controllers\\LoginController.cs",
+  "SelectedNode": "\\SistemaDeCadastro\\Enums\\PerfilEnum.cs",
   "PreviewInSolutionExplorer": false
 }
