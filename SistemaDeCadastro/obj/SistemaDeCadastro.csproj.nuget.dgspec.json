@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {}
+    "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {
+    "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
+        "projectUniqueName": "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
         "projectName": "SistemaDeCadastro",
-        "projectPath": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
+        "projectPath": "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
         "packagesPath": "C:\\Users\\PurooLight\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\obj\\",
+        "outputPath": "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
