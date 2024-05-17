@@ -59,5 +59,9 @@ namespace SistemaDeCadastro.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public IActionResult Register () {
+            return View();
+        }
     }
 }
