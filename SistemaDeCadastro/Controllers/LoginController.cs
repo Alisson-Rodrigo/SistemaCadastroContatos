@@ -6,8 +6,12 @@ namespace SistemaDeCadastro.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
 
-        public readonly IUsuarioRepositorio _usuarioRepositorio;
+        public LoginController(IUsuarioRepositorio usuarioRepositorio)
+        {
+            _usuarioRepositorio = usuarioRepositorio ?? throw new ArgumentNullException(nameof(usuarioRepositorio));
+        }
         public IActionResult Index()
         {
             return View();
@@ -18,27 +22,41 @@ namespace SistemaDeCadastro.Controllers
         {
             try
             {
-
                 if (ModelState.IsValid)
                 {
-                    UserModel usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
-                    if (usuario != null){
-                        if (usuario.VerificarSenha(dadosLogin.Senha)){
-                            Console.WriteLine("Chegou aqui - achou a senha e o usu");
-                            return RedirectToAction("Index", "Home");
-                        }
-                        TempData["MensagemError"] = "Senha incorreta";
-                        Console.WriteLine("Chegou aqui - achou o usuario");
+                    // Verifica se dadosLogin e dadosLogin.Login não são nulos
+                    if (dadosLogin == null)
+                    {
+                        TempData["MensagemError"] = "Dados de login são nulos";
+                        return View("Index");
                     }
-                    TempData["MensagemError"] = "Usuario n�o encontrado";
-                    Console.WriteLine("Chegou aqui - n�o achou o usuario");
+                    if (string.IsNullOrWhiteSpace(dadosLogin.Login))
+                    {
+                        TempData["MensagemError"] = "O campo de login está vazio";
+                        return View("Index", dadosLogin);
+                    }
+
+                    UserModel usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
+                    if (usuario == null)
+                    {
+                        TempData["MensagemError"] = "Usuário não encontrado";
+                        return View("Index", dadosLogin);
+                    }
+
+                    if (!usuario.VerificarSenha(dadosLogin.Senha))
+                    {
+                        TempData["MensagemError"] = "Senha incorreta";
+                        return View("Index", dadosLogin);
+                    }
+
+                    return RedirectToAction("Index", "Home");
                 }
                 return View("Index", dadosLogin);
             }
-            catch(System.Exception e)
+            catch (Exception e)
             {
-                TempData["MensagemError"] = $"Ops, n�o conseguimos logar, detalhe do erro: {e.Message}";
-                return RedirectToAction("Index", "Home");
+                TempData["MensagemError"] = $"Ops, não conseguimos logar, detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
             }
         }
     }
