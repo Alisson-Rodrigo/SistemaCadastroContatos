@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6G+FePDuUEwtf4SOiVJ5jjmNxWkX7XckhIcMEgFbQwqq7aG2o6lQaDUQNyRULIrelLWztNAdtcaXY52x5GXiqg==",
+  "dgSpecHash": "JKu8FrSCeKS5XOjmGMplkIYpK0uCXfTnlgrXGZY0tKp4CW2DjvqVzs+fEtMKk98/d3ZXfslX2FOfjP242ROJew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
+  "projectFilePath": "C:\\Users\\PurooLight\\Source\\Repos\\Alisson-Rodrigo\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PurooLight\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\PurooLight\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
