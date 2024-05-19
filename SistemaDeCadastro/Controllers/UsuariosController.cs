@@ -16,10 +16,11 @@ namespace SistemaDeCadastro.Controllers
             var usuarios = _usuarioRepositorio.GetUserList();
             return View(usuarios);
         }
-        public IActionResult Criar()
-        {
+
+        public IActionResult Register () {
             return View();
         }
+
         public IActionResult Editar(int Id)
         {
             var usuario = _usuarioRepositorio.InfoUsuario(Id);
@@ -78,7 +79,7 @@ namespace SistemaDeCadastro.Controllers
         }
 
         [HttpPost]
-        public IActionResult Criar(UserModel user)
+        public IActionResult Register(UserModel user)
         {
             //tentar adicionar o contato
             try
@@ -87,16 +88,22 @@ namespace SistemaDeCadastro.Controllers
                 {
                     if(_usuarioRepositorio.Adicionar(user)) {
                         TempData["MensagemSucesso"] = $"Usuario adicionado com sucesso.";
+                        return RedirectToAction("Index", "Login");
                     } else {
                         TempData["MensagemErro"] = $"Ops, usuário já cadastrado, tente novamente.";
+                        return View("Register");
                     }
                 }
-                return RedirectToAction("Index", "Usuarios");
+                else
+                {
+                    TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário, verifique os campos e tente novamente.";
+                    return View("Register");
+                }
 
             }
             catch (Exception e)
             {
-                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário, detalhe do erro: {e.Message}";
+                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário infelizmente, detalhe do erro: {e.Message}";
                 return RedirectToAction("Index");
             }
         }

@@ -6,11 +6,11 @@
 }
 
 <div>
-    @if (TempData["MensagemError"] != null)
+    @if (TempData["MensagemSucesso"] != null)
     {
-        <div class="alert alert-danger text-center" role="alert">
-            <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemError"]
+        <div class="alert alert-success text-center" role="alert">
+            <button type="button" class="btn-close" id="alert-verde" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemSucesso"]
         </div>
     }
 </div>
@@ -72,7 +72,7 @@
                         </button>
                         <p class="small fw-bold mt-2 pt-1 mb-0">
                             Don't have an account? 
-                            <a class="link-danger" asp-controller="Login" asp-action="Register" >Register</a>
+                            <a class="link-danger" asp-controller="Usuarios" asp-action="Register" >Register</a>
                         </p>
                     </div>
                 </form>

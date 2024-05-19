@@ -44,8 +44,5 @@ namespace SistemaDeCadastro.Controllers
             }
         }
 
-        public IActionResult Register () {
-            return View();
-        }
     }
 }
