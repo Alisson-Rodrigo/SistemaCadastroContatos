@@ -6,10 +6,11 @@
 }
 
 <div>
-    @if (TempData["MensagemErro"] != null) {
-    <div class="alert alert-danger text-center" role="alert" >
-        <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemErro"]
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success text-center" role="alert">
+            <button type="button" class="btn-close" id="alert-verde" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemSucesso"]
         </div>
     }
 </div>
