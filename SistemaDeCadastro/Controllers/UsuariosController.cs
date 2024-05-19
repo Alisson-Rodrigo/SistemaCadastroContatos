@@ -103,7 +103,7 @@ namespace SistemaDeCadastro.Controllers
             }
             catch (Exception e)
             {
-                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário, detalhe do erro: {e.Message}";
+                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário infelizmente, detalhe do erro: {e.Message}";
                 return RedirectToAction("Index");
             }
         }
