@@ -88,11 +88,17 @@ namespace SistemaDeCadastro.Controllers
                 {
                     if(_usuarioRepositorio.Adicionar(user)) {
                         TempData["MensagemSucesso"] = $"Usuario adicionado com sucesso.";
+                        return RedirectToAction("Index", "Login");
                     } else {
                         TempData["MensagemErro"] = $"Ops, usuário já cadastrado, tente novamente.";
+                        return View("Register");
                     }
                 }
-                return RedirectToAction("index", "Login");
+                else
+                {
+                    TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário, verifique os campos e tente novamente.";
+                    return View("Register");
+                }
 
             }
             catch (Exception e)
