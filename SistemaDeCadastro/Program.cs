@@ -1,6 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using SistemaDeCadastro.Data;
 using SistemaDeCadastro.Repositorio;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using SistemaDeCadastro.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +15,20 @@ builder.Services.AddControllersWithViews();
 var provider = builder.Services.BuildServiceProvider();
 var configuration = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<BancoContext>(item => item.UseSqlServer(configuration.GetConnectionString("Database")));
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+// Criando as sessoes do programa
 builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<ISessao, Sessao>();
+
+builder.Services.AddSession(o => {
+    o.Cookie.HttpOnly = true;
+    o.Cookie.IsEssential = true;
+     
+});
 
 var app = builder.Build();
 
@@ -24,6 +41,8 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 
