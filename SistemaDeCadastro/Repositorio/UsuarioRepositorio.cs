@@ -12,11 +12,32 @@ namespace SistemaDeCadastro.Repositorio
         {
             _bancoContext = bancoContext;
         }
-        public UserModel Adicionar(UserModel usuario)
+        public bool Adicionar(UserModel usuario)
         {
-            _bancoContext.Usuarios.Add(usuario);
-            _bancoContext.SaveChanges();
-            return usuario;
+            bool aux = false;
+            if (usuario == null) {
+                aux = false;
+            }
+            else {
+                if (verificarUsuarioExistente(usuario.Login) == false) {
+                    usuario.DataCriacao = DateTime.Now;
+                    _bancoContext.Usuarios.Add(usuario);
+                    _bancoContext.SaveChanges();
+                    aux = true;
+                }
+            }
+            return aux;
+        }
+
+        public bool verificarUsuarioExistente(string login)
+        {   bool aux = false;
+            var usuario = _bancoContext.Usuarios.FirstOrDefault(c => c.Login.ToUpper() == login.ToUpper());
+            if (usuario != null) {
+                if (usuario.Login.ToUpper() == login.ToUpper()) {
+                    aux = true;
+                }
+            }
+            return aux;
         }
 
         public UserModel BuscarPorLogin(string login)
