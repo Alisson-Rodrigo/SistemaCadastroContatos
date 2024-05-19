@@ -16,10 +16,11 @@ namespace SistemaDeCadastro.Controllers
             var usuarios = _usuarioRepositorio.GetUserList();
             return View(usuarios);
         }
-        public IActionResult Criar()
-        {
+
+        public IActionResult Register () {
             return View();
         }
+
         public IActionResult Editar(int Id)
         {
             var usuario = _usuarioRepositorio.InfoUsuario(Id);
@@ -78,7 +79,7 @@ namespace SistemaDeCadastro.Controllers
         }
 
         [HttpPost]
-        public IActionResult Criar(UserModel user)
+        public IActionResult Register(UserModel user)
         {
             //tentar adicionar o contato
             try
@@ -91,7 +92,7 @@ namespace SistemaDeCadastro.Controllers
                         TempData["MensagemErro"] = $"Ops, usuário já cadastrado, tente novamente.";
                     }
                 }
-                return RedirectToAction("Index", "Usuarios");
+                return RedirectToAction("index", "Login");
 
             }
             catch (Exception e)
