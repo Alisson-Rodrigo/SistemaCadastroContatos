@@ -85,12 +85,14 @@ namespace SistemaDeCadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _usuarioRepositorio.Adicionar(user);
-                    //Armazena uma mensagem na sessão
-                    TempData["MensagemSucesso"] = $"Usuario adicionado com sucesso.";
-                    return RedirectToAction("Index");
+                    if(_usuarioRepositorio.Adicionar(user)) {
+                        TempData["MensagemSucesso"] = $"Usuario adicionado com sucesso.";
+                    } else {
+                        TempData["MensagemErro"] = $"Ops, usuário já cadastrado, tente novamente.";
+                    }
                 }
-                return View(user);
+                return RedirectToAction("Index", "Usuarios");
+
             }
             catch (Exception e)
             {

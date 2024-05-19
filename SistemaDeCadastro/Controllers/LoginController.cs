@@ -24,34 +24,18 @@ namespace SistemaDeCadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    // Verifica se dadosLogin e dadosLogin.Login não são nulos
-                    if (dadosLogin == null)
+                    var usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
+                    if (usuario != null)
                     {
-                        TempData["MensagemError"] = "Dados de login são nulos";
-                        return View("Index");
+                        if (usuario.VerificarSenha(dadosLogin.Senha))
+                        {
+                            TempData["MensagemSucesso"] = "Login efetuado com sucesso";
+                            return RedirectToAction("Index", "Home");
+                        }
                     }
-                    if (string.IsNullOrWhiteSpace(dadosLogin.Login))
-                    {
-                        TempData["MensagemError"] = "O campo de login está vazio";
-                        return View("Index", dadosLogin);
-                    }
-
-                    UserModel usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
-                    if (usuario == null)
-                    {
-                        TempData["MensagemError"] = "Usuário não encontrado";
-                        return View("Index", dadosLogin);
-                    }
-
-                    if (!usuario.VerificarSenha(dadosLogin.Senha))
-                    {
-                        TempData["MensagemError"] = "Senha incorreta";
-                        return View("Index", dadosLogin);
-                    }
-
-                    return RedirectToAction("Index", "Home");
+                    TempData["MensagemError"] = "Usuário ou senha inválidos";
                 }
-                return View("Index", dadosLogin);
+                return View("Index");
             }
             catch (Exception e)
             {
