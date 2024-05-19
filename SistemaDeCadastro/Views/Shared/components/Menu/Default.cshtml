@@ -14,7 +14,9 @@
             <a class="nav-link text-dark" asp-area="" asp-controller="Contatos" asp-action="Index">Contatos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+            @if (Model.Perfil.ToString() == "Administrador") {
+                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+            }
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
