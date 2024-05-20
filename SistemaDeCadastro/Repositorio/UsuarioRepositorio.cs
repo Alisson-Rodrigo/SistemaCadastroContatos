@@ -1,5 +1,6 @@
 ﻿using SistemaDeCadastro.Data;
 using SistemaDeCadastro.Models;
+using SistemaDeCadastro.Helper;
 using System;
 
 namespace SistemaDeCadastro.Repositorio
@@ -21,7 +22,7 @@ namespace SistemaDeCadastro.Repositorio
             else {
                 if (verificarUsuarioExistente(usuario.Login) == false) {
                     usuario.DataCriacao = DateTime.Now;
-                    _bancoContext.Usuarios.Add(usuario);
+                    usuario.Senha = Criptografia.GerarHash(usuario.Senha);               _bancoContext.Usuarios.Add(usuario);
                     _bancoContext.SaveChanges();
                     aux = true;
                 }

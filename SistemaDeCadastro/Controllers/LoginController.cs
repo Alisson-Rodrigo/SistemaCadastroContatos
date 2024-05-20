@@ -53,6 +53,41 @@ namespace SistemaDeCadastro.Controllers
             }
         }
 
+        [HttpPost]
+         public IActionResult Register(UserModel user)
+        {
+            //tentar adicionar o contato
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if(_usuarioRepositorio.Adicionar(user)) {
+                        TempData["MensagemSucesso"] = $"Usuario adicionado com sucesso.";
+                        return RedirectToAction("Index", "Login");
+                    } else {
+                        TempData["MensagemErro"] = $"Ops, usuário já cadastrado, tente novamente.";
+                        return View("Register");
+                    }
+                }
+                else
+                {
+                    TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário, verifique os campos e tente novamente.";
+                    return View("Register");
+                }
+
+            }
+            catch (Exception e)
+            {
+                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário infelizmente, detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
+        public IActionResult Register () {
+            return View();
+        }
+
+
         public IActionResult Sair()
         {
             _sessao.RemoverSessaoDoUsuario();
