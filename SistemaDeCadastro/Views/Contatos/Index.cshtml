@@ -31,7 +31,7 @@
     <table class="table" id="table-contatos">
         <thead>
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">Id</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Email</th>
                 <th scope="col">Celular</th>
@@ -43,8 +43,11 @@
             {
                 foreach (ContatoModel item in Model)
                 {
+                    var cont = 1;
+                    cont += 1;
+                    
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">cont</th>
                         <td>@item.Nome</td>
                         <td>@item.Email</td>
                         <td>@item.Telefone</td>

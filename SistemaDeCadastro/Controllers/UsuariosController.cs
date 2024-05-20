@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaDeCadastro.Repositorio;
 using SistemaDeCadastro.Models;
+using SistemaDeCadastro.Filters;
 
 namespace SistemaDeCadastro.Controllers
 {
+    [PaginaRestritaSomenteAdmin]
     public class UsuariosController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
@@ -13,6 +15,7 @@ namespace SistemaDeCadastro.Controllers
         }
         public IActionResult Index()
         {
+            Console.WriteLine("acessou antes do filtro");
             var usuarios = _usuarioRepositorio.GetUserList();
             return View(usuarios);
         }

@@ -26,7 +26,7 @@
     <table class="table" id="table-usuarios">
         <thead>
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">Id</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Email</th>
@@ -39,8 +39,9 @@
             {
                 foreach (UserModel item in Model)
                 {
+                    
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">@item.id</th>
                         <td>@item.name</td>
                         <td>@item.Login</td>
                         <td>@item.Email</td>
