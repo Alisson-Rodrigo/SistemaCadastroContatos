@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaDeCadastro.Filters;
 using SistemaDeCadastro.Models;
 using SistemaDeCadastro.Repositorio;
 
 namespace SistemaDeCadastro.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class ContatosController : Controller
     {
         private readonly IContatoRepositorio _contatoRepositorio;
