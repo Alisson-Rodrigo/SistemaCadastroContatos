@@ -43,11 +43,10 @@
             {
                 foreach (ContatoModel item in Model)
                 {
-                    var cont = 1;
-                    cont += 1;
-                    
+           
+
                     <tr>
-                        <th scope="row">cont</th>
+                        <th scope="row">@item.Id</th>
                         <td>@item.Nome</td>
                         <td>@item.Email</td>
                         <td>@item.Telefone</td>
