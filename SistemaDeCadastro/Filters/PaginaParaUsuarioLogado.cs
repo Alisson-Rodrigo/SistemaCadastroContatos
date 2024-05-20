@@ -1,34 +1,35 @@
-using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using SistemaDeCadastro.Models;
 using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using SistemaDeCadastro.Models;
 
-namespace SistemaDeCadastro.Filters
+namespace ControleDeContatos.Filters
 {
     public class PaginaParaUsuarioLogado : ActionFilterAttribute
     {
-        //Iremos filtrar a pagina para que somente usuarios logados possam acessar
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             #pragma warning disable CS8600 // Conversão de literal nula ou possível valor nulo em tipo não anulável.
-            string usuario = context.HttpContext.Session.GetString("SessaoUsuarioLogado");
+            string sessaoUsuario = context.HttpContext.Session.GetString("SessaoUsuarioLogado");
             #pragma warning restore CS8600 // Conversão de literal nula ou possível valor nulo em tipo não anulável.
 
-            if (string.IsNullOrEmpty(usuario)) {
-                context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Login", action = "index" }) );
+            if (string.IsNullOrEmpty(sessaoUsuario))
+            {
+                context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controller", "Login" }, { "action", "index" } });
             }
-            else {
-                UserModel usuarioModel = JsonSerializer.Deserialize<UserModel>(usuario);
-                if (usuarioModel == null) {
-                context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Login", action = "index" }) );
+            else
+            {
+                #pragma warning disable CS8600 // Conversão de literal nula ou possível valor nulo em tipo não anulável.
+                UserModel usuario = JsonSerializer.Deserialize<UserModel>(sessaoUsuario);
+                #pragma warning restore CS8600 // Conversão de literal nula ou possível valor nulo em tipo não anulável.
+
+                if(usuario == null)
+                {
+                    context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controller", "Login" }, { "action", "index" } });
                 }
             }
-            
+
             base.OnActionExecuting(context);
-
         }
-
     }
 }

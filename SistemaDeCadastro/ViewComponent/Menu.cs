@@ -12,7 +12,7 @@ namespace SistemaDeCadastro.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             string SessaoUsuario = HttpContext.Session.GetString("SessaoUsuarioLogado");
-            if (string.IsNullOrEmpty(SessaoUsuario)) return View("MenuSemUsuario");
+            if (string.IsNullOrEmpty(SessaoUsuario)) return null;
 
             UserModel usuario = JsonSerializer.Deserialize<UserModel>(SessaoUsuario);
             return View(usuario);
