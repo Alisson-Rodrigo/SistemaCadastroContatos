@@ -22,7 +22,7 @@ namespace SistemaDeCadastro.Filters
             else {
                 UserModel usuarioModel = JsonSerializer.Deserialize<UserModel>(usuario);
                 if (usuarioModel == null) {
-                    context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Login", action = "index" }) );
+                context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Login", action = "index" }) );
                 }
             }
             
