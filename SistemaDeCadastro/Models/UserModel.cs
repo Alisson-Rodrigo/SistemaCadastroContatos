@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using SistemaDeCadastro.Enums;
+using SistemaDeCadastro.Helper;
 
 namespace SistemaDeCadastro.Models
 {
@@ -22,7 +23,10 @@ namespace SistemaDeCadastro.Models
         public DateTime? DataAtualizacao { get; set; }
 
         public bool VerificarSenha (string senha) {
-            return Senha == senha;
+            return senha.GerarHash() == Senha;
+        }
+        public void AlterarSenhaHash() {
+            Senha = Senha.GerarHash();
         }
 
         
