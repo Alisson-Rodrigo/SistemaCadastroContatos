@@ -1,27 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaDeCadastro.Models;
 using SistemaDeCadastro.Repositorio;
-using SistemaDeCadastro.Helper;
 
-namespace SistemaDeCadastro.Controllers
+namespace SistemaDeCadastro.Controllersw
 {
     public class LoginController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
-        private readonly ISessao _sessao;
 
-        public LoginController(IUsuarioRepositorio usuarioRepositorio, ISessao sessao)
+        public LoginController(IUsuarioRepositorio usuarioRepositorio)
         {
-            _usuarioRepositorio = usuarioRepositorio;
-            _sessao = sessao;
+            _usuarioRepositorio = usuarioRepositorio ?? throw new ArgumentNullException(nameof(usuarioRepositorio));
         }
         public IActionResult Index()
-        {   
-            //Se o usuario estiver logado, redireciona para a pagina principal
-            if (_sessao.BuscarSessaoDoUsuario() != null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
+        {
             return View();
         }
 
@@ -32,19 +24,34 @@ namespace SistemaDeCadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
-                    if (usuario != null)
+                    // Verifica se dadosLogin e dadosLogin.Login não são nulos
+                    if (dadosLogin == null)
                     {
-                        if (usuario.VerificarSenha(dadosLogin.Senha))
-                        {
-                            TempData["MensagemSucesso"] = "Login efetuado com sucesso";
-                            _sessao.CriarSessaoDoUsuario(usuario);
-                            return RedirectToAction("Index", "Home");
-                        }
+                        TempData["MensagemError"] = "Dados de login são nulos";
+                        return View("Index");
                     }
-                    TempData["MensagemErro"] = "Usuário ou senha inválidos";
+                    if (string.IsNullOrWhiteSpace(dadosLogin.Login))
+                    {
+                        TempData["MensagemError"] = "O campo de login está vazio";
+                        return View("Index", dadosLogin);
+                    }
+
+                    UserModel usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
+                    if (usuario == null)
+                    {
+                        TempData["MensagemError"] = "Usuário não encontrado";
+                        return View("Index", dadosLogin);
+                    }
+
+                    if (!usuario.VerificarSenha(dadosLogin.Senha))
+                    {
+                        TempData["MensagemError"] = "Senha incorreta";
+                        return View("Index", dadosLogin);
+                    }
+
+                    return RedirectToAction("Index", "Home");
                 }
-                return View("Index");
+                return View("Index", dadosLogin);
             }
             catch (Exception e)
             {
@@ -53,7 +60,7 @@ namespace SistemaDeCadastro.Controllers
             }
         }
 
-        [HttpPost]
+                [HttpPost]
          public IActionResult Register(UserModel user)
         {
             //tentar adicionar o contato
@@ -74,7 +81,7 @@ namespace SistemaDeCadastro.Controllers
                     TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário, verifique os campos e tente novamente.";
                     return View("Register");
                 }
-
+ 
             }
             catch (Exception e)
             {
@@ -82,17 +89,9 @@ namespace SistemaDeCadastro.Controllers
                 return RedirectToAction("Index");
             }
         }
-
+ 
         public IActionResult Register () {
             return View();
         }
-
-
-        public IActionResult Sair()
-        {
-            _sessao.RemoverSessaoDoUsuario();
-            return RedirectToAction("Index");
-        }
-
     }
 }
