@@ -1,0 +1,26 @@
+@{
+    Layout = "_Layout_deslogada";
+    ViewData["Title"] = "Redefinir Senha";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h1 class="card-title text-center mb-4">Redefinir Senha</h1>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Digite o seu e-mail">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-block mt-4">Enviar</button>
+                            <a class="btn btn-secondary btn-block mt-4" asp-action="Index" asp-controller="Login" role="button">Voltar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

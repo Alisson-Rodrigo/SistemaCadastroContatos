@@ -86,5 +86,10 @@ namespace SistemaDeCadastro.Controllersw
         public IActionResult Register () {
             return View();
         }
+
+        public IActionResult RedefinirSenha()
+        {
+            return View();
+        }
     }
 }
