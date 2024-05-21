@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaDeCadastro.Models;
 using SistemaDeCadastro.Repositorio;
 using SistemaDeCadastro.Helper;
-;
+
 
 namespace SistemaDeCadastro.Controllersw
 {
@@ -107,10 +107,20 @@ namespace SistemaDeCadastro.Controllersw
                     if (usuario != null)
                     {
                         //enviar e-mail
+                        
                         string novaSenha = usuario.GerarNovaSenha();
-                        _enviar.EnviarEmail(model' )
-
-                        TempData["MensagemSucesso"] = $"E-mail de redefinição de senha enviado com sucesso.";
+                        string mensagem = $"Olá, {usuario.name} sua nova senha é: {novaSenha}";
+                        bool emailEnviado = _enviar.EnviarEmail(model.Email, "Redefinição de senha", mensagem);
+                        if (emailEnviado)
+                        {
+                            TempData["MensagemSucesso"] = $"E-mail de redefinição de senha enviado com sucesso.";
+                            _usuarioRepositorio.EditarUsuario(usuario, usuario.id);
+                        }
+                        else
+                        {
+                            TempData["MensagemErro"] = $"Ops, não conseguimos enviar o e-mail de redefinição de senha.";
+                        }
+                        
                         return RedirectToAction("Index");
                     }
                     TempData["MensagemErro"] = $"E-mail não encontrado.";
