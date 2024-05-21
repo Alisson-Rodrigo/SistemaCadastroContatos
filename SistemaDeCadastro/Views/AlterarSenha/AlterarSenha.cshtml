@@ -1,0 +1,36 @@
+@model AlterarSenhaModel
+@{
+    ViewData["Title"] = "Alterar Senha";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Alterar senha do usuário</h1>
+</div>
+
+
+<form asp-controller="AlterarSenha" asp-action="Alterar" method="post">
+
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="nome" class="form-label">Senha atual</label>
+        <input type="password" asp-for="SenhaAtual" class="form-control" placeholder="Digite a senha atual">
+        @Html.ValidationMessageFor(x => x.SenhaAtual)
+    </div>
+
+    <div class="form-group">
+        <label for="nome" class="form-label">Senha nova</label>
+        <input type="password" asp-for="NovaSenha" class="form-control" placeholder="Digite a nova senha">
+        @Html.ValidationMessageFor(x => x.NovaSenha)
+    </div>
+
+    <div class="form-group">
+        <label for="nome" class="form-label">Confirme a nova senha</label>
+        <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" placeholder="Confirme a nova senha">
+        @Html.ValidationMessageFor(x => x.ConfirmarNovaSenha)
+    </div>
+    
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+        <a class="btn btn-secondary btn-block" asp-action="Index" asp-controller="Usuarios" role="button">Voltar</a>
+    </div>
+</form>
