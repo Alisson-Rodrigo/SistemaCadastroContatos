@@ -71,6 +71,12 @@ namespace SistemaDeCadastro.Repositorio
             return usuario;
         }
 
+        public UserModel BuscarPorId(int id)
+        {
+            UserModel usuario = _bancoContext.Usuarios.FirstOrDefault(c => c.id == id);
+            return usuario;
+        }
+
         public List<UserModel> GetUserList()
         {
             return _bancoContext.Usuarios.ToList();
@@ -111,21 +117,21 @@ namespace SistemaDeCadastro.Repositorio
             }
         }
 
-                public UsuarioModel AlterarSenha(AlterarSenhaModel alterarSenhaModel)
+                public UserModel AlterarSenha(AlterarSenhaModel alterarSenhaModel)
         {
-            UsuarioModel usuarioDB = BuscarPorID(alterarSenhaModel.Id);
+            UserModel usuarioDB = BuscarPorId(alterarSenhaModel.Id);
 
             if (usuarioDB == null) throw new Exception("Houve um erro na atualização da senha, usuário não encontrado!");
 
-            if (!usuarioDB.SenhaValida(alterarSenhaModel.SenhaAtual)) throw new Exception("Senha atual não confere!");
+            if (!usuarioDB.VerificarSenha(alterarSenhaModel.SenhaAtual)) throw new Exception("Senha atual não confere!");
 
-            if (usuarioDB.SenhaValida(alterarSenhaModel.NovaSenha)) throw new Exception("Nova senha deve ser diferente da senha atual!");
+            if (usuarioDB.VerificarSenha(alterarSenhaModel.NovaSenha)) throw new Exception("Nova senha deve ser diferente da senha atual!");
 
             usuarioDB.SetNovaSenha(alterarSenhaModel.NovaSenha);
             usuarioDB.DataAtualizacao = DateTime.Now;
 
-            _context.Usuarios.Update(usuarioDB);
-            _context.SaveChanges();
+            _bancoContext.Usuarios.Update(usuarioDB);
+            _bancoContext.SaveChanges();
 
             return usuarioDB;
         }

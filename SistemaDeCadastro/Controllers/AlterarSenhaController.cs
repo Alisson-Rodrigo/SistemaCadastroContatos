@@ -19,24 +19,27 @@ namespace SistemaDeCadastro.Controllers{
             return View();
         }
 
-        public IActionResult Alterar(AlterarSenhaModel alterarSenha)
+        public IActionResult Alterar(AlterarSenhaModel alterarSenhaModel)
         {
-            if (ModelState.IsValid)
+            try
             {
-                //alterar senha
-                var usuario = _sessao.BuscarSessaoDoUsuario();
-                alterarSenha.Id = usuario.id;
+                UserModel usuarioLogado = _sessao.BuscarSessaoDoUsuario();
+                alterarSenhaModel.Id = usuarioLogado.id;
 
-                if (_usuarioRepositorio.AlterarSenha(alterarSenha))
+                if (ModelState.IsValid)
                 {
+                    _usuarioRepositorio.AlterarSenha(alterarSenhaModel);
                     TempData["MensagemSucesso"] = "Senha alterada com sucesso!";
-                    return RedirectToAction("Index", "Home");
+                    return View("Index", alterarSenhaModel);
                 }
-                TempData["MensagemErro"] = "Ops, não conseguimos alterar a sua senha, verifique os campos e tente novamente.";
-                return View("Index");
+
+                return View("Index", alterarSenhaModel);
             }
-            TempData["MensagemErro"] = "Ops, não conseguimos alterar a sua senha, verifique os campos e tente novamente.";
-            return View("Index", alterarSenha);
+            catch (Exception erro)
+            {
+                TempData["MensagemErro"] = $"Ops, não conseguimos alterar sua senha, tente novamante, detalhe do erro: {erro.Message}";
+                return View("Index", alterarSenhaModel);
+            }
         }
     }
 }
