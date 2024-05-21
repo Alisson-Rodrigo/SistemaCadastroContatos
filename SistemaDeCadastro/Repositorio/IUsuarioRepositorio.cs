@@ -12,7 +12,11 @@ namespace SistemaDeCadastro.Repositorio
         UserModel BuscarPorLogin(string login);
         List<UserModel> GetUserList();
         bool DeletarUsuario(int Id);
-        public bool verificarUsuarioExistente(string login);
+        bool verificarUsuarioExistente(string login);
+        UserModel BuscarPorEmail(string email);
+        bool verificarEmailExistente(string email);
+
+
 
 
 

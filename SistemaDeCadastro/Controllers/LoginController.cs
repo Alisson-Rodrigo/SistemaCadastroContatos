@@ -91,5 +91,33 @@ namespace SistemaDeCadastro.Controllersw
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult EnviarLinkDeRedefinicao(RedefinirSenhaModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var usuario = _usuarioRepositorio.BuscarPorEmail(model.Email);
+                    if (usuario != null)
+                    {
+                        //enviar e-mail
+                        string novaSenha = usuario.GerarNovaSenha();
+                        TempData["MensagemSucesso"] = $"E-mail de redefinição de senha enviado com sucesso.";
+                        return RedirectToAction("Index");
+                    }
+                    TempData["MensagemErro"] = $"E-mail não encontrado.";
+                    return View("RedefinirSenha");
+                }
+                TempData["MensagemErro"] = $"E-mail inválido.";
+                return View("RedefinirSenha");
+            }
+            catch (Exception e)
+            {
+                TempData["MensagemErro"] = $"Ops, não conseguimos enviar o e-mail de redefinição de senha, detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
+        }
     }
 }
