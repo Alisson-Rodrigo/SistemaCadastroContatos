@@ -25,7 +25,9 @@ namespace SistemaDeCadastro.Controllers{
             {
                 //alterar senha
                 var usuario = _sessao.BuscarSessaoDoUsuario();
-                if (_usuarioRepositorio.AlterarSenha(usuario, alterarSenha))
+                alterarSenha.Id = usuario.id;
+
+                if (_usuarioRepositorio.AlterarSenha(alterarSenha))
                 {
                     TempData["MensagemSucesso"] = "Senha alterada com sucesso!";
                     return RedirectToAction("Index", "Home");

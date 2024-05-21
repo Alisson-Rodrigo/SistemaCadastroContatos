@@ -111,20 +111,24 @@ namespace SistemaDeCadastro.Repositorio
             }
         }
 
-        public bool AlterarSenha(UserModel usuario, AlterarSenhaModel alterarSenha) 
+                public UsuarioModel AlterarSenha(AlterarSenhaModel alterarSenhaModel)
         {
-            if (usuario.VerificarSenha(alterarSenha.SenhaAtual))
-            {
-                if (alterarSenha.NovaSenha == alterarSenha.ConfirmarNovaSenha)
-                {
-                    usuario.Senha = alterarSenha.NovaSenha.GerarHash();
-                    _bancoContext.Usuarios.Update(usuario);
-                    _bancoContext.SaveChanges();
-                    return true;
-                }
-            }
-            return false;
+            UsuarioModel usuarioDB = BuscarPorID(alterarSenhaModel.Id);
 
+            if (usuarioDB == null) throw new Exception("Houve um erro na atualização da senha, usuário não encontrado!");
+
+            if (!usuarioDB.SenhaValida(alterarSenhaModel.SenhaAtual)) throw new Exception("Senha atual não confere!");
+
+            if (usuarioDB.SenhaValida(alterarSenhaModel.NovaSenha)) throw new Exception("Nova senha deve ser diferente da senha atual!");
+
+            usuarioDB.SetNovaSenha(alterarSenhaModel.NovaSenha);
+            usuarioDB.DataAtualizacao = DateTime.Now;
+
+            _context.Usuarios.Update(usuarioDB);
+            _context.SaveChanges();
+
+            return usuarioDB;
         }
+
     }
 }
