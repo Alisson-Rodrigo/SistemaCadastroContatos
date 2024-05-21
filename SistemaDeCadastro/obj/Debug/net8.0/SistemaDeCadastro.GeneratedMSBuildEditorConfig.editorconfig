@@ -9,87 +9,91 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SistemaDeCadastro
 build_property.RootNamespace = SistemaDeCadastro
-build_property.ProjectDir = C:\Users\PurooLight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\
+build_property.ProjectDir = C:\Users\purolight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\PurooLight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro
+build_property.MSBuildProjectDirectory = C:\Users\purolight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/ApagarConfirmacao.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/ApagarConfirmacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b3NcQXBhZ2FyQ29uZmlybWFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/Criar.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b3NcQ3JpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/Editar.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b3NcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/Index.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Home/Index.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Login/index.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Login/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Login/register.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Login/RedefinirSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVkZWZpbmlyU2VuaGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Login/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5ccmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Restrita/Index.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Restrita/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdHJpdGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/components/Menu/Default.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/components/Menu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/Error.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/_Layout_deslogada.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/_Layout_deslogada.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfZGVzbG9nYWRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/ApagarConfirmacao.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/ApagarConfirmacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQXBhZ2FyQ29uZmlybWFjYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/Criar.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/Editar.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/Index.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/_ViewImports.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/_ViewStart.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PurooLight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/_Layout.cshtml]
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1unn6hqk7g
