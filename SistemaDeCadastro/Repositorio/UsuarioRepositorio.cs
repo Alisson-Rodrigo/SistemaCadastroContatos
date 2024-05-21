@@ -22,7 +22,8 @@ namespace SistemaDeCadastro.Repositorio
             else {
                 if (verificarUsuarioExistente(usuario.Login) == false) {
                     usuario.DataCriacao = DateTime.Now;
-                    usuario.Senha = Criptografia.GerarHash(usuario.Senha);               _bancoContext.Usuarios.Add(usuario);
+                    usuario.AlterarSenhaHash();
+                    _bancoContext.Usuarios.Add(usuario);
                     _bancoContext.SaveChanges();
                     aux = true;
                 }
