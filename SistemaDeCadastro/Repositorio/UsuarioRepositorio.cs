@@ -21,11 +21,13 @@ namespace SistemaDeCadastro.Repositorio
             }
             else {
                 if (verificarUsuarioExistente(usuario.Login) == false) {
-                    usuario.DataCriacao = DateTime.Now;
-                    usuario.AlterarSenhaHash();
-                    _bancoContext.Usuarios.Add(usuario);
-                    _bancoContext.SaveChanges();
-                    aux = true;
+                    if (verificarEmailExistente(usuario.Email) == false){
+                        usuario.DataCriacao = DateTime.Now;
+                        usuario.AlterarSenhaHash();
+                        _bancoContext.Usuarios.Add(usuario);
+                        _bancoContext.SaveChanges();
+                        aux = true;
+                    }
                 }
             }
             return aux;
@@ -42,12 +44,31 @@ namespace SistemaDeCadastro.Repositorio
             return aux;
         }
 
+        public bool verificarEmailExistente(string email)
+        {
+            bool aux = false;
+            var usuario = _bancoContext.Usuarios.FirstOrDefault(c => c.Email.ToUpper() == email.ToUpper());
+            if (usuario != null)
+            {
+                if (usuario.Email.ToUpper() == email.ToUpper())
+                {
+                    aux = true;
+                }
+            }
+            return aux;
+        }
+
         public UserModel BuscarPorLogin(string login)
         {
-            Console.WriteLine(login);
             UserModel usuario = _bancoContext.Usuarios.FirstOrDefault(c => c.Login.ToUpper() == login.ToUpper());
             return usuario;
 
+        }
+
+        public UserModel BuscarPorEmail(string email)
+        {
+            UserModel usuario = _bancoContext.Usuarios.FirstOrDefault(c => c.Email.ToUpper() == email.ToUpper());
+            return usuario;
         }
 
         public List<UserModel> GetUserList()
