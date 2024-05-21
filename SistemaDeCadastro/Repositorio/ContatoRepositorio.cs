@@ -18,9 +18,9 @@ namespace SistemaDeCadastro.Repositorio
             return contato;
         }
 
-        public List<ContatoModel> GetContatoList()
+        public List<ContatoModel> GetContatoList(int userId)
         {
-            return _bancoContext.Contatos.ToList();
+            return _bancoContext.Contatos.Where(c => c.Id == userId).ToList();
         }
 
         public ContatoModel InfoContato(int id)
