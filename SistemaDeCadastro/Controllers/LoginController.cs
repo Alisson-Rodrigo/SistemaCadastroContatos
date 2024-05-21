@@ -2,18 +2,22 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaDeCadastro.Models;
 using SistemaDeCadastro.Repositorio;
 using SistemaDeCadastro.Helper;
+;
 
 namespace SistemaDeCadastro.Controllersw
 {
+
     public class LoginController : Controller
     {
+        private readonly IEnviar _enviar;
         private readonly IUsuarioRepositorio _usuarioRepositorio;
         private readonly ISessao _sessao;
 
-        public LoginController(IUsuarioRepositorio usuarioRepositorio, ISessao sessao)
+        public LoginController(IUsuarioRepositorio usuarioRepositorio, ISessao sessao, IEnviar enviar)
         {
             _usuarioRepositorio = usuarioRepositorio;
             _sessao = sessao;
+            _enviar = enviar;
         }
         public IActionResult Index()
         {
@@ -104,6 +108,8 @@ namespace SistemaDeCadastro.Controllersw
                     {
                         //enviar e-mail
                         string novaSenha = usuario.GerarNovaSenha();
+                        _enviar.EnviarEmail(model' )
+
                         TempData["MensagemSucesso"] = $"E-mail de redefinição de senha enviado com sucesso.";
                         return RedirectToAction("Index");
                     }
