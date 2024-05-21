@@ -18,8 +18,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\purolight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/AlterarSenha/AlterarSenha.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx0ZXJhclNlbmhhXEFsdGVyYXJTZW5oYS5jc2h0bWw=
+[C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/AlterarSenha/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx0ZXJhclNlbmhhXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/purolight/Documents/GitHub/SistemaCadastroContatos/SistemaDeCadastro/Views/Contatos/ApagarConfirmacao.cshtml]

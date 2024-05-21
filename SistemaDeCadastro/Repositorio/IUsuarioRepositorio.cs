@@ -16,6 +16,7 @@ namespace SistemaDeCadastro.Repositorio
         UserModel BuscarPorEmail(string email);
         bool verificarEmailExistente(string email);
 
+        bool AlterarSenha(UserModel usuario, AlterarSenhaModel alterarSenha);
 
 
 

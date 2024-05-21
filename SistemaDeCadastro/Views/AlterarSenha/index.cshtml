@@ -3,13 +3,20 @@
     ViewData["Title"] = "Alterar Senha";
 }
 
+<div>
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success text-center" role="alert">
+            <button type="button" class="btn-close" id="alert-verde" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+</div>
+
 <div class="text-center">
     <h1 class="display-4">Alterar senha do usuário</h1>
 </div>
-
-
 <form asp-controller="AlterarSenha" asp-action="Alterar" method="post">
-
     <input type="hidden" asp-for="Id" />
     <div class="form-group">
         <label for="nome" class="form-label">Senha atual</label>

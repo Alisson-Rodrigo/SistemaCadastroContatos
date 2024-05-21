@@ -111,5 +111,20 @@ namespace SistemaDeCadastro.Repositorio
             }
         }
 
+        public bool AlterarSenha(UserModel usuario, AlterarSenhaModel alterarSenha) 
+        {
+            if (usuario.VerificarSenha(alterarSenha.SenhaAtual))
+            {
+                if (alterarSenha.NovaSenha == alterarSenha.ConfirmarNovaSenha)
+                {
+                    usuario.Senha = alterarSenha.NovaSenha.GerarHash();
+                    _bancoContext.Usuarios.Update(usuario);
+                    _bancoContext.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
+
+        }
     }
 }
