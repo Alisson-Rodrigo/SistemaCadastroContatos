@@ -13,7 +13,7 @@ namespace SistemaDeCadastro.Models
         [Required(ErrorMessage = "Digite o numero do contato")]
         [Phone(ErrorMessage = "Digite um numero valido")]
         public string Telefone { get; set; }
-
-
+        public int? UsuarioID { get; set; }
+        public UserModel Usuario { get; set; }
     }
 }

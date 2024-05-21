@@ -11,6 +11,11 @@ namespace SistemaDeCadastro.Data
 
         public DbSet<ContatoModel> Contatos { get; set; }
         public DbSet<UserModel> Usuarios { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new Map.ContatoMap());
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }

@@ -2,6 +2,7 @@
 using SistemaDeCadastro.Filters;
 using SistemaDeCadastro.Models;
 using SistemaDeCadastro.Repositorio;
+using SistemaDeCadastro.Helper;
 
 namespace SistemaDeCadastro.Controllers
 {
@@ -9,13 +10,16 @@ namespace SistemaDeCadastro.Controllers
     public class ContatosController : Controller
     {
         private readonly IContatoRepositorio _contatoRepositorio;
-        public ContatosController(IContatoRepositorio contatoRepositorio)
+        private readonly ISessao _sessao;
+        public ContatosController(IContatoRepositorio contatoRepositorio, ISessao sessao)
         {
             _contatoRepositorio = contatoRepositorio;
+            _sessao = sessao;
         }
         public IActionResult Index()
         {
-            var contatos = _contatoRepositorio.GetContatoList();
+            var usuario = _sessao.BuscarSessaoDoUsuario();
+            var contatos = _contatoRepositorio.GetContatoList(usuario.id);
             return View(contatos);
         }
         public IActionResult Criar()
