@@ -1,20 +1,30 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaDeCadastro.Models;
 using SistemaDeCadastro.Repositorio;
+using SistemaDeCadastro.Helper;
 
 namespace SistemaDeCadastro.Controllersw
 {
     public class LoginController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
+        private readonly ISessao _sessao;
 
-        public LoginController(IUsuarioRepositorio usuarioRepositorio)
+        public LoginController(IUsuarioRepositorio usuarioRepositorio, ISessao sessao)
         {
-            _usuarioRepositorio = usuarioRepositorio ?? throw new ArgumentNullException(nameof(usuarioRepositorio));
+            _usuarioRepositorio = usuarioRepositorio;
+            _sessao = sessao;
         }
         public IActionResult Index()
         {
+            if(_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Home");
             return View();
+        }
+
+        public IActionResult Sair()
+        {
+            _sessao.RemoverSessaoDoUsuario();
+            return RedirectToAction("Index", "Login");
         }
 
         [HttpPost]
@@ -24,44 +34,27 @@ namespace SistemaDeCadastro.Controllersw
             {
                 if (ModelState.IsValid)
                 {
-                    // Verifica se dadosLogin e dadosLogin.Login não são nulos
-                    if (dadosLogin == null)
-                    {
-                        TempData["MensagemError"] = "Dados de login são nulos";
-                        return View("Index");
+                    var usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
+                    if (usuario != null) {
+                        if (usuario.VerificarSenha(dadosLogin.Senha)) {
+                            _sessao.CriarSessaoDoUsuario(usuario);
+                            TempData["MensagemSucesso"] = $"Seja bem vindo {usuario.name}!";
+                            return RedirectToAction("Index", "Home");
+                        } 
                     }
-                    if (string.IsNullOrWhiteSpace(dadosLogin.Login))
-                    {
-                        TempData["MensagemError"] = "O campo de login está vazio";
-                        return View("Index", dadosLogin);
-                    }
-
-                    UserModel usuario = _usuarioRepositorio.BuscarPorLogin(dadosLogin.Login);
-                    if (usuario == null)
-                    {
-                        TempData["MensagemError"] = "Usuário não encontrado";
-                        return View("Index", dadosLogin);
-                    }
-
-                    if (!usuario.VerificarSenha(dadosLogin.Senha))
-                    {
-                        TempData["MensagemError"] = "Senha incorreta";
-                        return View("Index", dadosLogin);
-                    }
-
-                    return RedirectToAction("Index", "Home");
                 }
-                return View("Index", dadosLogin);
+                TempData["MensagemErro"] = $"Usuário e/ou senha inválido(s). Por favor, tente novamente.";
+                return View("Index");
             }
             catch (Exception e)
             {
-                TempData["MensagemError"] = $"Ops, não conseguimos logar, detalhe do erro: {e.Message}";
+                TempData["MensagemErro"] = $"Ops, não conseguimos logar, detalhe do erro: {e.Message}";
                 return RedirectToAction("Index");
             }
         }
 
-                [HttpPost]
-         public IActionResult Register(UserModel user)
+        [HttpPost]
+        public IActionResult Register(UserModel user)
         {
             //tentar adicionar o contato
             try
