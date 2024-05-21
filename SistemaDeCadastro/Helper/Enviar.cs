@@ -1,3 +1,4 @@
+using System.Net;
 using System.Net.Mail;
 using Microsoft.Extensions.Configuration;
 
@@ -16,30 +17,35 @@ namespace SistemaDeCadastro.Helper
             try
             {
                 string host = _configuration.GetValue<string>("SMTP:Host");
-                int porta = _configuration.GetValue<int>("SMTP:Porta");
-                string usuario = _configuration.GetValue<string>("SMTP:UserName");
+                string nome = _configuration.GetValue<string>("SMTP:Nome");
+                string username = _configuration.GetValue<string>("SMTP:UserName");
                 string senha = _configuration.GetValue<string>("SMTP:Senha");
-                string displayName = _configuration.GetValue<string>("SMTP:DisplayName");
+                int porta = _configuration.GetValue<int>("SMTP:Porta");
 
-                MailMessage mail = new MailMessage(){
-                    From = new MailAddress(usuario, displayName),
-                    Subject = assunto,
-                    Body = mensagem,
-                    IsBodyHtml = true
+                MailMessage mail = new MailMessage()
+                {
+                    From = new MailAddress(username, nome)
                 };
+
                 mail.To.Add(email);
+                mail.Subject = assunto;
+                mail.Body = mensagem;
+                mail.IsBodyHtml = true;
                 mail.Priority = MailPriority.High;
 
-                using(SmtpClient smtp = new SmtpClient(host, porta)){
-                    smtp.Credentials = new System.Net.NetworkCredential(usuario, senha);
+                using (SmtpClient smtp = new SmtpClient(host, porta))
+                {
+                    smtp.Credentials = new NetworkCredential(username, senha);
                     smtp.EnableSsl = true;
+
                     smtp.Send(mail);
                     return true;
                 }
-
             }
             catch (System.Exception)
             {
+                // Gravar log de erro ao enviar e-mail
+
                 return false;
             }
 
