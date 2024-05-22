@@ -1,0 +1,63 @@
+﻿@model List<ContatoModel>
+@{
+    ViewData["Title"] = "Listagem de Contatos";
+}
+
+
+<div>
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success text-center" role="alert">
+            <button type="button" class="btn-close" id="alert-verde" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null) {
+        <div class="alert alert-danger text-center" role="alert" >
+            <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+</div>
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-success" role="button" asp-controller="Contatos" asp-action="Criar"> Novo Contato </a>
+    <br />
+</div>
+<div class="text-center"> 
+    <h1 class="display-4">Listagem de Contatos</h1>
+
+    <table class="table" id="table-contatos">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Celular</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+             @if (Model != null && Model.Any())
+            {
+                foreach (ContatoModel item in Model)
+                {
+           
+
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td>@item.Nome</td>
+                        <td>@item.Email</td>
+                        <td>@item.Telefone</td>
+                        <td>
+                            <a role="button" class="btn btn-primary" asp-route-id="@item.Id" asp-controller="Contatos" asp-action="Editar">Editar</a>
+                            <a role="button" class="btn btn-danger" asp-route-id="@item.Id" asp-controller="Contatos" asp-action="ApagarConfirmacao">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>

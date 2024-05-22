@@ -1,0 +1,84 @@
+@model UserModel
+
+@{
+    Layout = "_Layout_deslogada";
+    ViewData["Title"] = "Registre-se";
+}
+
+<div>
+    @if (TempData["MensagemErro"] != null) {
+    <div class="alert alert-danger text-center" role="alert" >
+        <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+</div>
+
+<section class="container">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                     class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form asp-controller="Login" asp-action="Register" method="post">
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-10 mb-3 fs-2">Registre-se</p>
+                    </div>
+
+                    <!-- Nome Input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input asp-for="name" type="text" id="form3Example3" class="form-control form-control-lg"
+                               placeholder="Digite o seu nome" />
+                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                        <label class="form-label" for="form3Example3">Nome</label>
+                    </div>
+
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input asp-for="Email" type="email" id="form3Example3" class="form-control form-control-lg"
+                               placeholder="Digite o seu email" />
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        <label class="form-label" for="form3Example3">Email</label>
+                    </div>
+
+                    <!-- Login input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input asp-for="Login" type="text" id="form3Example3" class="form-control form-control-lg"
+                               placeholder="Digite o seu Login de acesso" />
+                        @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+                        <label class="form-label" for="form3Example3">Login</label>
+                    </div>
+
+                    <!-- Perfil input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <select asp-for="Perfil" class="form-control form-control-lg">
+                            <option value="1">Administrador</option>
+                            <option value="2">Usuário</option>
+                        </select>
+                        @Html.ValidationMessageFor(model => model.Perfil, "", new { @class = "text-danger" })
+                        <label class="form-label" for="form3Example3">Perfil</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-3">
+                        <input asp-for="Senha" type="password" id="form3Example4" class="form-control form-control-lg"
+                               placeholder="Digite a sua senha" />
+                        @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                        <label class="form-label" for="form3Example4">Senha</label>
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2" id="block_register">
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                            Registrar-se
+                        </button>
+                        <a class="btn btn-secondary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" asp-action="Index" asp-controller="Login" role="button">Voltar</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
