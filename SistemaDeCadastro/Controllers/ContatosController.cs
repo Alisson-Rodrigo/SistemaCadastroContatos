@@ -50,6 +50,7 @@ namespace SistemaDeCadastro.Controllers
                     TempData["MensagemSucesso"] = $"Contato adicionado com sucesso.";
                     return RedirectToAction("Index");
                 }
+                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu contato.";
                 return View(contato);
             }
             catch (Exception e)
