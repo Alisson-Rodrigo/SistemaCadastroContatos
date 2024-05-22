@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using SistemaDeCadastro.Data.Map;
+using Microsoft.EntityFrameworkCore;
 using SistemaDeCadastro.Models;
 
 namespace SistemaDeCadastro.Data
@@ -13,7 +14,7 @@ namespace SistemaDeCadastro.Data
         public DbSet<UserModel> Usuarios { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new Map.ContatoMap());
+            modelBuilder.ApplyConfiguration(new ContatoMap());
             base.OnModelCreating(modelBuilder);
         }
 

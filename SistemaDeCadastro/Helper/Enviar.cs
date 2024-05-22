@@ -39,6 +39,7 @@ namespace SistemaDeCadastro.Helper
                     smtp.EnableSsl = true;
 
                     smtp.Send(mail);
+                    Console.WriteLine("E-mail enviado com sucesso!");
                     return true;
                 }
             }
