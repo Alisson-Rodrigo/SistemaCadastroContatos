@@ -1,16 +1,6 @@
 ﻿@model ContatoModel
 
 <div>
-    @if (TempData["MensagemErro"] != null) {
-        <div class="alert alert-danger text-center" role="alert" >
-            <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemErro"]
-        </div>
-    }
-</div>
-
-
-<div>
     <h1 class="display-4 text-center">
         Adicionar Contato
     </h1>
