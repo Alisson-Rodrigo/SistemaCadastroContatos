@@ -45,14 +45,11 @@ namespace SistemaDeCadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    Console.WriteLine(contato.Nome + " " + contato.Email + " " + contato.Telefone + contato, " " + contato.UsuarioID );
-                    contato.UsuarioID = _sessao.BuscarSessaoDoUsuario().id;
                     _contatoRepositorio.Adicionar(contato);
                     //Armazena uma mensagem na sessão
                     TempData["MensagemSucesso"] = $"Contato adicionado com sucesso.";
                     return RedirectToAction("Index");
                 }
-                TempData["MensagemErro"] = "Ops, não conseguimos cadastrar o seu contato, verifique os campos e tente novamente.";
                 return View(contato);
             }
             catch (Exception e)
