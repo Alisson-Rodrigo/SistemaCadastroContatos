@@ -9,7 +9,7 @@ namespace SistemaDeCadastro.Repositorio
         private readonly BancoContext _bancoContext;
         public ContatoRepositorio(BancoContext bancoContext)
         {
-            _bancoContext = bancoContext;
+            this._bancoContext = bancoContext;
         }
         public ContatoModel Adicionar(ContatoModel contato)
         {
@@ -20,7 +20,7 @@ namespace SistemaDeCadastro.Repositorio
 
         public List<ContatoModel> GetContatoList(int userId)
         {
-            return _bancoContext.Contatos.Where(c => c.Id == userId).ToList();
+            return _bancoContext.Contatos.Where(c => c.UsuarioID == userId).ToList();
         }
 
         public ContatoModel InfoContato(int id)

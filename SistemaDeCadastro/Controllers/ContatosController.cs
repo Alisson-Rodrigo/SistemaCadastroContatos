@@ -19,7 +19,7 @@ namespace SistemaDeCadastro.Controllers
         public IActionResult Index()
         {
             var usuario = _sessao.BuscarSessaoDoUsuario();
-            var contatos = _contatoRepositorio.GetContatoList(usuario.id);
+            List<ContatoModel> contatos = _contatoRepositorio.GetContatoList(usuario.id);
             return View(contatos);
         }
         public IActionResult Criar()
@@ -45,12 +45,16 @@ namespace SistemaDeCadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    UserModel user = _sessao.BuscarSessaoDoUsuario();
+                    contato.UsuarioID = user.id;
+
                     _contatoRepositorio.Adicionar(contato);
                     //Armazena uma mensagem na sessão
                     TempData["MensagemSucesso"] = $"Contato adicionado com sucesso.";
                     return RedirectToAction("Index");
                 }
                 TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu contato.";
+                //retorne para a mesma pagina com msg de erro
                 return View(contato);
             }
             catch (Exception e)
@@ -67,6 +71,9 @@ namespace SistemaDeCadastro.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    UserModel user = _sessao.BuscarSessaoDoUsuario();
+                    contato.UsuarioID = user.id;
+
                     _contatoRepositorio.EditarContato(contato, Id);
                     TempData["MensagemSucesso"] = $"Contato editado com sucesso.";
                     return RedirectToAction("index");
