@@ -25,6 +25,15 @@ namespace SistemaDeCadastro.Controllersw
             return View();
         }
 
+        public IActionResult Register () {
+            return View();
+        }
+
+        public IActionResult RedefinirSenha()
+        {
+            return View();
+        }
+
         public IActionResult Sair()
         {
             _sessao.RemoverSessaoDoUsuario();
@@ -65,13 +74,22 @@ namespace SistemaDeCadastro.Controllersw
             {
                 if (ModelState.IsValid)
                 {
+                    /* # Debugging
+                    var errors = ModelState
+                        .Where(x => x.Value.Errors.Count > 0)
+                        .Select(x => new { x.Key, x.Value.Errors })
+                        .ToArray();
+                    */
+
                     if(_usuarioRepositorio.Adicionar(user)) {
                         TempData["MensagemSucesso"] = $"Usuario adicionado com sucesso.";
                         return RedirectToAction("Index", "Login");
+
                     } else {
                         TempData["MensagemErro"] = $"Ops, usuário já cadastrado, tente novamente.";
                         return View("Register");
                     }
+                    
                 }
                 else
                 {
@@ -86,15 +104,7 @@ namespace SistemaDeCadastro.Controllersw
                 return RedirectToAction("Index");
             }
         }
- 
-        public IActionResult Register () {
-            return View();
-        }
 
-        public IActionResult RedefinirSenha()
-        {
-            return View();
-        }
 
         [HttpPost]
         public IActionResult EnviarLinkDeRedefinicao(RedefinirSenhaModel model)

@@ -78,7 +78,7 @@ namespace SistemaDeCadastro.Controllers
                     TempData["MensagemSucesso"] = $"Contato editado com sucesso.";
                     return RedirectToAction("index");
                 }
-
+                TempData["MensagemErro"] = $"Ops, não conseguimos editar o seu contato.";
                 return View(contato);
 
             }

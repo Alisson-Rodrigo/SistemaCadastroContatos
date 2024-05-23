@@ -21,7 +21,7 @@ namespace SistemaDeCadastro.Models
         public string Senha { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime? DataAtualizacao { get; set; }
-        public virtual List<ContatoModel> Contatos { get; set; }
+        public virtual List<ContatoModel>? Contatos { get; set; }
 
         public bool VerificarSenha (string senha) {
             return senha.GerarHash() == Senha;

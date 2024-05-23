@@ -3,6 +3,15 @@
     ViewData["Title"] = "Criar contato";
 }
 
+<div>
+    @if (TempData["MensagemErro"] != null) {
+        <div class="alert alert-danger text-center" role="alert" >
+            <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+</div>
+
 <div class="text-center">
     <h1 class="display-4">Editar contato</h1>
 </div>

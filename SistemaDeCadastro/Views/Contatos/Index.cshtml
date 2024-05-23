@@ -13,12 +13,6 @@
         </div>
     }
 
-    @if (TempData["MensagemErro"] != null) {
-        <div class="alert alert-danger text-center" role="alert" >
-            <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemErro"]
-        </div>
-    }
 </div>
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -43,8 +37,6 @@
             {
                 foreach (ContatoModel item in Model)
                 {
-           
-
                     <tr>
                         <th scope="row">@item.Id</th>
                         <td>@item.Nome</td>
