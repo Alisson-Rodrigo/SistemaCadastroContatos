@@ -51,7 +51,7 @@
                         <td>@(usuario.Perfil == SistemaDeCadastro.Enums.PerfilEnum.Administrador ? "Administrador" : "Padrão")</td>
                         <td class="text-center">
                             <a href="javascript:" class="btn btn-success btn-sm btn-total-contatos">
-                                10
+                                @(usuario.Contatos != null && usuario.Contatos.Any() ? usuario.Contatos.Count() : 0)
                             </a>
                         </td>
                         <td>@usuario.DataCriacao</td>
