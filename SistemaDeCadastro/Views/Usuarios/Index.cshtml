@@ -3,57 +3,89 @@
     ViewData["Title"] = "Listagem de Usuários";
 }
 
+<div class="text-center">
 
-<div>
     @if (TempData["MensagemSucesso"] != null)
     {
-        <div class="alert alert-success text-center" role="alert">
-            <button type="button" class="btn-close" id="alert-verde" data-bs-dismiss="alert" aria-label="Close">X</button>
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
             @TempData["MensagemSucesso"]
         </div>
     }
 
-    @if (TempData["MensagemErro"] != null) {
-        <div class="alert alert-danger text-center" role="alert" >
-            <button type="button" class="btn-close" id="alert-vermelho" data-bs-dismiss="alert" aria-label="Close">X</button>
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
             @TempData["MensagemErro"]
         </div>
     }
-</div>
-<div class="text-center"> 
-    <h1 class="display-4">Listagem de Usuários</h1>
 
-    <table class="table" id="table-usuarios">
+    <br />
+
+    <h1 class="display-4">Listagem de usuários</h1>
+
+    <table id="table-usuarios" class="display" style="width:100%">
         <thead>
             <tr>
-                <th scope="col">Id</th>
+                <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Email</th>
-                <th scope="col">Data de Criação</th>
-                <th>Opções</th>
+                <th scope="col">Perfil</th>
+                <th scope="col">Total de Contatos</th>
+                <th scope="col">Data de cadastro</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-             @if (Model != null && Model.Any())
+            @if (Model != null && Model.Any())
             {
-                foreach (UserModel item in Model)
+                foreach (var usuario in Model)
                 {
-                    
                     <tr>
-                        <th scope="row">@item.id</th>
-                        <td>@item.name</td>
-                        <td>@item.Login</td>
-                        <td>@item.Email</td>
-                        <td>@item.DataCriacao</td>
+                        <th scope="row">@usuario.id</th>
+                        <td>@usuario.name</td>
+                        <td>@usuario.Login</td>
+                        <td>@usuario.Email</td>
+                        <td>@(usuario.Perfil == SistemaDeCadastro.Enums.PerfilEnum.Administrador ? "Administrador" : "Padrão")</td>
+                        <td class="text-center">
+                            <a href="javascript:" class="btn btn-success btn-sm btn-total-contatos">
+                                10
+                            </a>
+                        </td>
+                        <td>@usuario.DataCriacao</td>
                         <td>
-                            <a role="button" class="btn btn-primary" asp-route-id="@item.id" asp-controller="Usuarios" asp-action="Editar">Editar</a>
-                            <a role="button" class="btn btn-danger" asp-route-id="@item.id" asp-controller="Usuarios" asp-action="ApagarConfirmacao">Excluir</a>
+                            <div class="btn-group" role="group">
+                                <a role="button" asp-action="Editar" asp-controller="Usuarios" asp-route-id="@usuario.id" class="btn btn-primary">Editar</a>
+                                <a role="button" asp-action="ApagarConfirmacao" asp-controller="Usuarios" asp-route-id="@usuario.id" class="btn btn-danger">Apagar</a>
+                            </div>
                         </td>
                     </tr>
                 }
             }
-
+            else
+            {
+                <tr class="odd"><td valign="top" colspan="5">Nenhum usuário encontrado</td></tr>
+            }
         </tbody>
     </table>
+
+
+    <div id="modalContatosUsuario" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Listagem de contatos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="listaContatosUsuario"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
