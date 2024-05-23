@@ -2,6 +2,7 @@
 using SistemaDeCadastro.Models;
 using SistemaDeCadastro.Helper;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace SistemaDeCadastro.Repositorio
 {
@@ -13,6 +14,7 @@ namespace SistemaDeCadastro.Repositorio
         {
             _bancoContext = bancoContext;
         }
+
         public bool Adicionar(UserModel usuario)
         {
             bool aux = false;
@@ -79,7 +81,8 @@ namespace SistemaDeCadastro.Repositorio
 
         public List<UserModel> GetUserList()
         {
-            return _bancoContext.Usuarios.ToList();
+            //retornar todos os usuarios e seus contatos
+            return _bancoContext.Usuarios.Include(c => c.Contatos).ToList();
         }
 
         public UserModel InfoUsuario(int id)
@@ -117,7 +120,7 @@ namespace SistemaDeCadastro.Repositorio
             }
         }
 
-                public UserModel AlterarSenha(AlterarSenhaModel alterarSenhaModel)
+        public UserModel AlterarSenha(AlterarSenhaModel alterarSenhaModel)
         {
             UserModel usuarioDB = BuscarPorId(alterarSenhaModel.Id);
 
