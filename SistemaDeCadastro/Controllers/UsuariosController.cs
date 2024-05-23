@@ -9,21 +9,33 @@ namespace SistemaDeCadastro.Controllers
     public class UsuariosController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
-        public UsuariosController(IUsuarioRepositorio usuarioRepositorio)
+        private readonly IContatoRepositorio _contatoRepositorio;
+        public UsuariosController(IUsuarioRepositorio usuarioRepositorio, IContatoRepositorio contatoRepositorio)
         {
             _usuarioRepositorio = usuarioRepositorio;
+            _contatoRepositorio = contatoRepositorio;
         }
         public IActionResult Index()
         {
-            Console.WriteLine("acessou antes do filtro");
-            var usuarios = _usuarioRepositorio.GetUserList();
+            List <UserModel> usuarios = _usuarioRepositorio.GetUserList();
             return View(usuarios);
+        }
+
+        public IActionResult Register () {
+            return View();
         }
 
         public IActionResult Editar(int Id)
         {
             var usuario = _usuarioRepositorio.InfoUsuario(Id);
             return View(usuario);
+        }
+
+        [HttpGet]
+        public IActionResult ListarContatosPorUsuarioId(int Id)
+        {
+            List<ContatoModel> contatos = _contatoRepositorio.GetContatoList(Id);
+            return PartialView("_contatosUsuario", contatos);
         }
 
 
@@ -77,6 +89,35 @@ namespace SistemaDeCadastro.Controllers
 
         }
 
+        [HttpPost]
+        public IActionResult Register(UserModel user)
+        {
+            //tentar adicionar o contato
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if(_usuarioRepositorio.Adicionar(user)) {
+                        TempData["MensagemSucesso"] = $"Usuario adicionado com sucesso.";
+                        return RedirectToAction("Index", "Login");
+                    } else {
+                        TempData["MensagemErro"] = $"Ops, usuário já cadastrado, tente novamente.";
+                        return View("Register");
+                    }
+                }
+                else
+                {
+                    TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário, verifique os campos e tente novamente.";
+                    return View("Register");
+                }
+
+            }
+            catch (Exception e)
+            {
+                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o seu usuário infelizmente, detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
+        }
 
 
     }
