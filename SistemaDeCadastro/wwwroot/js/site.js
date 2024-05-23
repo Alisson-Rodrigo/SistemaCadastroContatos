@@ -3,6 +3,8 @@
 
 // Write your JavaScript code.
 
+
+
 $(document).ready(function () {
     $('#table-contatos').DataTable({
         "ordering": true,
@@ -61,6 +63,10 @@ $(document).ready(function () {
                 "sSortDescending": ": Ordenar colunas de forma descendente"
             }
         }
+    });
+
+    $('.btn-total-contatos').click(function () {
+        $('#modalContatosUsuario').modal('show');
     });
 
 });
