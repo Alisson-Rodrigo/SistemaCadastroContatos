@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\purolight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {}
+    "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\purolight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {
+    "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\purolight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
+        "projectUniqueName": "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
         "projectName": "SistemaDeCadastro",
-        "projectPath": "C:\\Users\\purolight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
-        "packagesPath": "C:\\Users\\purolight\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\purolight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\obj\\",
+        "projectPath": "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\SistemaDeCadastro.csproj",
+        "packagesPath": "C:\\Users\\PurooLight\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PurooLight\\Documents\\GitHub\\SistemaCadastroContatos\\SistemaDeCadastro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\purolight\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PurooLight\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
