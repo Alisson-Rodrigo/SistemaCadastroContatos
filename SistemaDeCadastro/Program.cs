@@ -13,8 +13,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var provider = builder.Services.BuildServiceProvider();
+
+/*
 var configuration = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<BancoContext>(item => item.UseSqlServer(configuration.GetConnectionString("Database")));
+*/
+string mySqlConnection = builder.Configuration.GetConnectionString("Database");
+builder.Services.AddDbContextPool<BancoContext>(options =>
+    options.UseMySql(mySqlConnection,
+    ServerVersion.AutoDetect(mySqlConnection)));
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

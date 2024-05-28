@@ -546,3 +546,5 @@ C:\Users\purolight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\ob
 C:\Users\purolight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\obj\Debug\net8.0\SistemaDeCadastro.pdb
 C:\Users\purolight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\obj\Debug\net8.0\SistemaDeCadastro.genruntimeconfig.cache
 C:\Users\purolight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\obj\Debug\net8.0\ref\SistemaDeCadastro.dll
+C:\Users\PurooLight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\PurooLight\Documents\GitHub\SistemaCadastroContatos\SistemaDeCadastro\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
